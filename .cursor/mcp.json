@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "Mintlify_generaldocs": {
+      "url": "https://mintlify.com/docs/mcp"
+    },
+    "Mintlify_untypeddocs": {
+      "url": "https://docs.getuntyped.ai/mcp"
+    }
+  }
+}

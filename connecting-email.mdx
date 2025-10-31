@@ -1,0 +1,131 @@
+---
+title: 'Connecting Your Email'
+description: 'Learn how to securely connect Gmail or Outlook to Untyped'
+---
+
+## Connect Your Email Account
+
+Untyped works with both Gmail and Outlook accounts. Choose your provider below to get started.
+
+<Tabs>
+<Tab title="Gmail">
+
+### Connect Gmail to Untyped
+
+<Steps>
+
+<Step title="Sign in with Google">
+  Click the "Sign in with Google" button on the Untyped sign-in page at [beta.getuntyped.ai](https://beta.getuntyped.ai).
+</Step>
+
+<Step title="Select your account">
+  Choose the Gmail account you want to connect to Untyped.
+</Step>
+
+<Step title="Grant permissions">
+  Untyped will request permission to:
+  - Read your emails and metadata
+  - Access your Gmail labels
+  - Send emails on your behalf (for drafts)
+  
+  <Note>
+  These permissions allow Untyped to learn from your email history and generate personalized drafts. Your data is encrypted and never shared with third parties.
+  </Note>
+</Step>
+
+<Step title="Complete setup">
+  Once authorized, you'll be redirected to your Untyped dashboard where the onboarding process will begin.
+</Step>
+
+</Steps>
+
+### Troubleshooting Gmail Connection
+
+<AccordionGroup>
+<Accordion title="Permission denied error">
+  If you see a permission error, make sure your Google account allows third-party apps. Go to your Google Account settings and check that "Allow less secure app access" is enabled if required.
+</Accordion>
+
+<Accordion title="Can't see certain emails">
+  Untyped respects Gmail's native filtering. If you have filters that archive or delete emails automatically, Untyped won't process those emails.
+</Accordion>
+</AccordionGroup>
+
+</Tab>
+
+<Tab title="Outlook">
+
+### Connect Outlook to Untyped
+
+<Steps>
+
+<Step title="Sign in with Microsoft">
+  Click the "Sign in with Microsoft" button on the Untyped sign-in page at [beta.getuntyped.ai](https://beta.getuntyped.ai).
+</Step>
+
+<Step title="Select your account">
+  Choose the Outlook/Microsoft account you want to connect.
+  
+  <Tip>
+  This works with personal Outlook accounts, work accounts (Microsoft 365), and Hotmail accounts.
+  </Tip>
+</Step>
+
+<Step title="Grant permissions">
+  Untyped will request permission to:
+  - Read your mail and folders
+  - Access your mailbox settings
+  - Send mail on your behalf (for drafts)
+  
+  <Note>
+  These permissions are necessary for Untyped to analyze your communication patterns and generate draft responses.
+  </Note>
+</Step>
+
+<Step title="Complete setup">
+  After authorization, you'll be taken to your Untyped dashboard where the onboarding process will start.
+</Step>
+
+</Steps>
+
+### Troubleshooting Outlook Connection
+
+<AccordionGroup>
+<Accordion title="Work account restrictions">
+  If you're using a work/school Microsoft 365 account, your organization's admin may need to approve the Untyped app. Contact your IT department if you encounter access issues.
+</Accordion>
+
+<Accordion title="Two-factor authentication">
+  If you have 2FA enabled (recommended!), you'll need to complete the additional authentication step during sign-in. Untyped fully supports 2FA.
+</Accordion>
+</AccordionGroup>
+
+</Tab>
+</Tabs>
+
+## What Permissions Does Untyped Need?
+
+Untyped requires read and send permissions to function effectively:
+
+- **Read access**: To learn from your email history and understand your communication patterns
+- **Send access**: To create draft responses in your inbox (you always have final approval before sending)
+- **Label/folder access**: To categorize and organize emails automatically
+
+<Warning>
+Untyped never sends emails without your explicit approval. All drafts are suggestions that you can edit, approve, or discard.
+</Warning>
+
+## Data Security
+
+Your email data is encrypted at rest and in transit. We use industry-standard security practices to protect your information. Learn more in our [Security](/data-privacy/security) documentation.
+
+## Next Steps
+
+<Card
+  title="Complete Onboarding"
+  icon="rocket"
+  href="/quickstart"
+>
+  Now that your email is connected, complete the onboarding process to start using Untyped.
+</Card>
+

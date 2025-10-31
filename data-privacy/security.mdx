@@ -1,0 +1,460 @@
+---
+title: 'Security'
+description: 'How we protect your data and keep your account secure'
+---
+
+## Security Overview
+
+Untyped implements industry-leading security practices to protect your email data and account.
+
+<Note>
+We treat your email data with the same security standards as financial institutions handle your money.
+</Note>
+
+## Data Encryption
+
+### Encryption at Rest
+
+All stored data is encrypted using:
+
+- **Algorithm**: AES-256 encryption
+- **Key Management**: AWS KMS with automatic key rotation
+- **Scope**: All email content, metadata, and user data
+
+<Tip>
+AES-256 is the same encryption standard used by banks and government agencies. It would take billions of years to crack with current technology.
+</Tip>
+
+### Encryption in Transit
+
+All data transmission uses:
+
+- **Protocol**: TLS 1.3 (latest standard)
+- **Certificate**: 2048-bit RSA keys
+- **Perfect Forward Secrecy**: Each session uses unique encryption keys
+
+**What this means:**
+- No one can intercept data between you and Untyped
+- Even we can't read data in transit
+- Past sessions can't be decrypted if keys are compromised
+
+## Infrastructure Security
+
+### Cloud Hosting
+
+Hosted on AWS with:
+
+- **Regions**: Multiple availability zones
+- **Isolation**: Separate VPCs per environment
+- **Monitoring**: 24/7 automated threat detection
+- **DDoS Protection**: AWS Shield Standard
+
+### Database Security
+
+Our databases feature:
+
+- **Encryption**: All data encrypted at rest
+- **Access Control**: IP whitelist + credential authentication
+- **Backups**: Encrypted, geo-redundant, tested monthly
+- **Isolation**: Database not accessible from public internet
+
+### Network Security
+
+Protected by multiple layers:
+
+1. **Firewall**: Only essential ports open
+2. **WAF**: Web Application Firewall blocks attacks
+3. **Rate Limiting**: Prevents brute force attempts
+4. **IP Filtering**: Suspicious IPs automatically blocked
+
+## Application Security
+
+### Authentication
+
+Secure account access with:
+
+**OAuth 2.0:**
+- Sign in via Google/Microsoft (no password to steal)
+- Tokens expire regularly
+- Refresh tokens securely stored
+
+**Two-Factor Authentication (2FA):**
+- Available for all accounts
+- TOTP-based (Google Authenticator, Authy)
+- Backup codes provided
+- Strongly recommended
+
+<Warning>
+Enable 2FA for maximum account security. It prevents unauthorized access even if your password is compromised.
+</Warning>
+
+### Session Management
+
+Your sessions are secured with:
+
+- **Timeout**: Auto-logout after 7 days of inactivity
+- **Device Tracking**: See all active sessions
+- **Remote Logout**: End sessions from any device
+- **Anomaly Detection**: Suspicious logins trigger alerts
+
+### Password Security (if using password login)
+
+If you create a password:
+
+- **Hashing**: bcrypt with high cost factor
+- **Salting**: Unique salt per password
+- **Requirements**: Minimum 12 characters, complexity enforced
+- **Breach Detection**: Checked against known compromised passwords
+
+<Tip>
+We recommend using OAuth (Google/Microsoft) instead of passwords for enhanced security.
+</Tip>
+
+## API Security
+
+For developers using our API:
+
+### Authentication
+
+- **API Keys**: Randomly generated, high entropy
+- **Key Rotation**: Rotate keys anytime
+- **Scope Limits**: Keys limited to specific permissions
+- **Expiration**: Set key expiry dates
+
+### Rate Limiting
+
+Prevents abuse with:
+
+- Per-key rate limits
+- Endpoint-specific limits
+- Automatic temporary bans for violations
+- Graceful degradation under attack
+
+### Input Validation
+
+All API inputs are:
+
+- Sanitized to prevent injection attacks
+- Type-checked and validated
+- Size-limited to prevent overflow
+- Logged for security monitoring
+
+## Email Security
+
+### Email Provider Connection
+
+When connecting to Gmail/Outlook:
+
+**OAuth Tokens:**
+- Stored encrypted in our database
+- Refresh tokens rotated regularly
+- Revocable at any time
+- Never logged or exposed
+
+**Permissions:**
+- Minimum necessary access only
+- Scoped to specific functions
+- Auditable by you in your email provider's security settings
+
+**Transmission:**
+- All email API calls use TLS 1.3
+- No email content stored in logs
+- Rate-limited to prevent scraping
+
+### Draft Security
+
+Email drafts are:
+
+- Encrypted in storage
+- Never sent automatically (you always review)
+- Deleted after 90 days
+- Not accessible via our API
+
+## Access Control
+
+### Internal Access
+
+Strict policies for Untyped employees:
+
+**Principle of Least Privilege:**
+- Access limited to job requirements only
+- Regular access reviews
+- Automatic deprovisioning on role change
+
+**No Access to User Data:**
+- Engineers can't view your emails
+- Support needs your explicit permission
+- All access is logged and audited
+- Multi-person approval required for any manual data access
+
+**Background Checks:**
+- All employees undergo background checks
+- NDA and security training required
+- Regular security awareness training
+
+### Audit Logging
+
+Complete audit trail of:
+
+- All data access attempts
+- Configuration changes
+- Authentication events
+- Security incidents
+
+**Logs are:**
+- Immutable (can't be modified after creation)
+- Retained for 1 year
+- Monitored for anomalies
+- Available to Enterprise customers
+
+## Vulnerability Management
+
+### Security Testing
+
+Regular security assessments:
+
+**Penetration Testing:**
+- Annual third-party pen tests
+- Quarterly internal security reviews
+- Continuous automated scanning
+
+**Code Security:**
+- Static analysis on all code
+- Dependency vulnerability scanning
+- Security-focused code reviews
+- Automated security testing in CI/CD
+
+### Bug Bounty Program
+
+We run a responsible disclosure program:
+
+- Report security vulnerabilities
+- Coordinated disclosure process
+- Recognition for researchers
+- Rewards for valid findings
+
+**Report vulnerabilities to:** security@getuntyped.ai
+
+### Incident Response
+
+In case of a security incident:
+
+1. **Detection**: 24/7 monitoring alerts our team
+2. **Containment**: Immediate action to limit impact
+3. **Investigation**: Root cause analysis
+4. **Remediation**: Fix vulnerability
+5. **Notification**: Affected users notified within 72 hours
+
+## Compliance & Certifications
+
+### Current Compliance
+
+- **GDPR**: Full compliance with EU data protection
+- **CCPA**: California Consumer Privacy Act compliant
+- **SOC 2 Type II**: In progress (expected Q2 2024)
+- **PCI DSS**: Compliant via Stripe (payment processing)
+
+### Security Standards
+
+Following industry best practices:
+
+- OWASP Top 10 mitigations
+- NIST Cybersecurity Framework
+- CIS Controls
+- ISO 27001 alignment (pursuing certification)
+
+## Data Center Security
+
+### Physical Security
+
+AWS data centers feature:
+
+- 24/7 security personnel
+- Biometric access controls
+- Video surveillance
+- Environmental controls (fire, flood, power)
+
+### Disaster Recovery
+
+Protected against disasters:
+
+**Backups:**
+- Continuous backups every 5 minutes
+- Retained for 30 days
+- Geo-redundant storage
+- Tested monthly for restoration
+
+**Failover:**
+- Multi-region architecture
+- Automatic failover
+- Less than 30 second downtime in worst case
+- Zero data loss guarantee
+
+## Third-Party Security
+
+### Vendor Assessment
+
+All vendors must:
+
+- Undergo security review
+- Sign data processing agreements
+- Maintain their own security certifications
+- Submit to regular audits
+
+### Current Vendors
+
+**AWS** - Cloud infrastructure
+- SOC 1, 2, 3 certified
+- ISO 27001 certified
+- GDPR, HIPAA compliant
+
+**Stripe** - Payment processing
+- PCI DSS Level 1 certified
+- Never shares card data with us
+- Industry-leading payment security
+
+**SendGrid** - Email delivery
+- SOC 2 Type II certified
+- GDPR compliant
+- Secure email transmission
+
+## User Security Best Practices
+
+Protect your account:
+
+### Enable 2FA
+
+<Steps>
+
+<Step title="Go to Settings">
+  Navigate to Settings > Profile > Security
+</Step>
+
+<Step title="Enable 2FA">
+  Click "Enable Two-Factor Authentication"
+</Step>
+
+<Step title="Scan QR code">
+  Use Google Authenticator or Authy to scan the QR code
+</Step>
+
+<Step title="Save backup codes">
+  Store backup codes in a secure location
+</Step>
+
+</Steps>
+
+### Review Active Sessions
+
+Regularly check:
+
+- All devices with active sessions
+- Last login times and locations
+- Revoke unfamiliar sessions immediately
+
+### Use Strong Authentication
+
+- Use OAuth (Google/Microsoft) when possible
+- If using password, make it unique and 15+ characters
+- Never share your password or API keys
+- Use a password manager
+
+### Monitor Your Account
+
+Watch for:
+
+- Unexpected draft emails
+- Unfamiliar rules or configurations
+- Mailboxes you didn't add
+- Changed settings
+
+<Warning>
+If you notice any suspicious activity, immediately revoke all sessions, change your password, and contact support@getuntyped.ai.
+</Warning>
+
+## Reporting Security Issues
+
+### Responsible Disclosure
+
+Found a security vulnerability?
+
+**Email:** security@getuntyped.ai
+
+**Include:**
+- Detailed description of the vulnerability
+- Steps to reproduce
+- Potential impact
+- Your contact information
+
+**We promise:**
+- Acknowledgment within 24 hours
+- Regular updates on our investigation
+- Credit for your discovery (if you want)
+- No legal action for good-faith research
+
+### What NOT to Do
+
+- ❌ Don't test on production with real user data
+- ❌ Don't publicly disclose before we've had time to fix
+- ❌ Don't attempt social engineering on our staff
+- ❌ Don't perform denial of service attacks
+
+## Security Transparency
+
+We believe in transparency:
+
+### Public Security Page
+
+View our security posture:
+- Current certifications
+- Recent security updates
+- Incident history
+- Contact information
+
+[Visit Security Page](https://www.getuntyped.ai/security) (when available)
+
+### Status Page
+
+Real-time system status:
+- Current operational status
+- Scheduled maintenance
+- Incident history
+- Subscribe to updates
+
+### Security Advisories
+
+When security issues affect users:
+- Public disclosure after fix
+- Detailed explanation
+- Steps users should take
+- Preventive measures implemented
+
+## Questions About Security
+
+**Security Questions:**  
+Email: security@getuntyped.ai  
+Response time: Within 24 hours
+
+**Enterprise Security:**  
+For custom security requirements, SLAs, or security questionnaires:  
+Email: enterprise@getuntyped.ai
+
+## Next Steps
+
+<Columns cols={2}>
+  <Card
+    title="Enable 2FA Now"
+    icon="shield-check"
+    href="/settings/profile"
+  >
+    Secure your account with two-factor authentication
+  </Card>
+  <Card
+    title="Review Your Data"
+    icon="database"
+    href="/data-privacy/your-data"
+  >
+    Learn what data we store and how it's protected
+  </Card>
+</Columns>
+

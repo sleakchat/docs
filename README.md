@@ -1,44 +1,93 @@
-# Mintlify Starter Kit
+# Untyped Documentation
 
-Use the starter kit to get your docs deployed and ready to customize.
+User-friendly documentation for Untyped - Your AI Email Assistant.
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
+## About
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
+This repository contains the complete documentation for Untyped, built with [Mintlify](https://mintlify.com).
 
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
+Visit the live documentation at [docs.getuntyped.ai](https://docs.getuntyped.ai)
 
-## Development
+## Local Development
 
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
+### Prerequisites
 
-```
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Setup
+
+Install the Mintlify CLI:
+
+```bash
 npm i -g mint
 ```
 
-Run the following command at the root of your documentation, where your `docs.json` is located:
+### Run Locally
 
-```
+Navigate to the docs directory and start the development server:
+
+```bash
 mint dev
 ```
 
-View your local preview at `http://localhost:3000`.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the docs.
 
-## Publishing changes
+## Documentation Structure
 
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
+```
+/
+├── index.mdx                 # Homepage
+├── quickstart.mdx            # Quick start guide
+├── connecting-email.mdx      # Email connection guide
+├── features/                 # Feature documentation
+│   ├── drafting.mdx         # AI Email Drafting (primary feature)
+│   ├── agent.mdx            # AI Agent Dashboard
+│   ├── labels.mdx           # Email Categorization
+│   ├── prompt-editor.mdx    # Prompt Customization
+│   ├── rules.mdx            # Rules Engine
+│   └── knowledge.mdx        # Knowledge Base
+├── settings/                 # Settings documentation
+│   ├── profile.mdx          # Profile & Preferences
+│   ├── mailboxes.mdx        # Mailbox Management
+│   └── billing.mdx          # Billing & Plans
+└── data-privacy/            # Privacy & Security
+    ├── your-data.mdx        # Data Handling
+    ├── security.mdx         # Security Measures
+    └── export.mdx           # Data Export
 
-## Need help?
+```
 
-### Troubleshooting
+## Configuration
 
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
+All documentation configuration is in `docs.json`:
 
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)
-- [Mintlify community](https://mintlify.com/community)
+- **Branding**: Colors, logo, favicon
+- **Navigation**: Page structure and organization
+- **Integrations**: Social links, navbar, footer
+
+## Contributing
+
+When adding or updating documentation:
+
+1. Follow the established tone: friendly, clear, non-technical
+2. Use Mintlify components appropriately (Cards, Steps, Tabs, etc.)
+3. Focus on user value, not implementation details
+4. Test locally before committing
+5. Keep content up-to-date with app features
+
+## Deployment
+
+Documentation is automatically deployed via Mintlify when changes are pushed to the main branch.
+
+Monitor deployment status in the [Mintlify Dashboard](https://dashboard.mintlify.com).
+
+## Support
+
+- **Documentation Issues**: Open an issue in this repository
+- **Product Support**: support@getuntyped.ai
+- **Mintlify Help**: [Mintlify Documentation](https://mintlify.com/docs)
+
+## License
+
+© 2024 Untyped. All rights reserved.

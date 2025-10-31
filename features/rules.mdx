@@ -1,0 +1,412 @@
+---
+title: 'Rules'
+description: 'Control how your AI agent handles different types of emails with custom rules'
+---
+
+## What are Rules?
+
+Rules let you define specific behaviors for how your AI agent should handle different emails. Think of them as "if-then" statements that automate actions based on email characteristics.
+
+<Note>
+Rules work alongside your [Prompt](/features/prompt-editor) to give you fine-grained control over your agent's behavior.
+</Note>
+
+## Common Rule Types
+
+### Auto-Draft Rules
+
+Control which emails get automatic draft responses:
+
+**Example:**
+```
+IF sender is from @company.com
+AND subject contains "urgent"
+THEN create draft response within 5 minutes
+```
+
+### Categorization Rules
+
+Automatically assign labels to specific emails:
+
+**Example:**
+```
+IF sender is sales@anycompany.com
+THEN apply label: "Sales Inquiries"
+AND apply label: "Follow-up needed"
+```
+
+### Priority Rules
+
+Flag important emails that need your attention:
+
+**Example:**
+```
+IF sender is in "VIP Contacts"
+OR subject contains "URGENT"
+THEN mark as high priority
+AND notify me immediately
+```
+
+### Skip Rules
+
+Prevent drafts for certain types of emails:
+
+**Example:**
+```
+IF sender is automated@notifications.com
+OR subject contains "newsletter"
+THEN skip draft generation
+```
+
+## Creating a Rule
+
+<Steps>
+
+<Step title="Access Rules">
+  Navigate to the Rules section in your Untyped dashboard at [beta.getuntyped.ai](https://beta.getuntyped.ai).
+</Step>
+
+<Step title="Create new rule">
+  Click "Create Rule" and choose a rule type (Draft, Label, Priority, or Skip).
+</Step>
+
+<Step title="Set conditions">
+  Define when the rule should trigger:
+  - Sender email or domain
+  - Subject keywords
+  - Email content
+  - Existing labels
+  - Time of day
+</Step>
+
+<Step title="Define actions">
+  Specify what should happen when conditions are met:
+  - Generate/skip draft
+  - Apply labels
+  - Set priority
+  - Send notification
+</Step>
+
+<Step title="Test and activate">
+  Review your rule configuration and activate it. Rules apply to new emails immediately.
+</Step>
+
+</Steps>
+
+## Rule Conditions
+
+You can create rules based on:
+
+### Sender Criteria
+
+- Specific email address
+- Email domain (@company.com)
+- Contact group (VIP, Team, Clients)
+- Sender name
+
+### Content Criteria
+
+- Subject line keywords
+- Email body text
+- Attachment presence
+- Links or URLs
+
+### Metadata Criteria
+
+- Time received
+- Day of week
+- Existing labels
+- Thread length
+
+### Relationship Criteria
+
+- First-time sender
+- Frequent contact
+- Past conversation history
+- Response patterns
+
+<Tip>
+Combine multiple conditions using AND/OR logic for more precise rules.
+</Tip>
+
+## Rule Actions
+
+### Draft Generation
+
+- Create draft immediately
+- Create draft with specific tone
+- Skip draft generation
+- Delay draft by X hours
+
+### Labeling
+
+- Apply one or more labels
+- Remove labels
+- Replace existing label
+
+### Notifications
+
+- Send push notification
+- Email digest
+- Slack/Teams alert
+- SMS (premium)
+
+### Email Management
+
+- Move to folder
+- Archive automatically
+- Mark as read/unread
+- Star/flag email
+
+## Rule Examples
+
+### Example 1: Client Communication
+
+**Goal:** Always draft professional responses to client emails
+
+```
+Conditions:
+- Sender domain matches client domains list
+- OR sender has label "Client"
+
+Actions:
+- Create draft using "Professional" tone
+- Apply label "Client Communication"
+- Set priority to High
+```
+
+### Example 2: Newsletter Management
+
+**Goal:** Auto-archive newsletters without drafts
+
+```
+Conditions:
+- Subject contains "newsletter" OR "unsubscribe"
+- OR sender is in newsletter list
+
+Actions:
+- Skip draft generation
+- Apply label "Newsletter"
+- Archive email
+- Mark as read
+```
+
+### Example 3: Team Coordination
+
+**Goal:** Quick, casual responses to team emails
+
+```
+Conditions:
+- Sender domain is @mycompany.com
+- AND sender is in "Team" contact group
+
+Actions:
+- Create draft using "Casual" tone
+- Apply label "Team"
+- Aim for brief responses (under 50 words)
+```
+
+### Example 4: Meeting Requests
+
+**Goal:** Handle calendar invites consistently
+
+```
+Conditions:
+- Subject contains "meeting" OR "call" OR "sync"
+- OR email contains calendar invite
+
+Actions:
+- Create draft checking calendar availability
+- Propose alternative times if unavailable
+- Apply label "Meetings"
+```
+
+## Rule Priority
+
+When multiple rules could apply to the same email:
+
+1. Rules are evaluated in order of priority (you set this)
+2. First matching rule wins (unless set to continue)
+3. You can allow multiple rules to apply with "Continue to next rule" option
+
+**Example Priority:**
+```
+1. VIP Client rules (highest)
+2. Team communication rules
+3. General draft rules
+4. Auto-archive rules (lowest)
+```
+
+## Managing Rules
+
+### Enable/Disable
+
+Temporarily turn off rules without deleting them:
+- Useful for vacation mode
+- Testing new workflows
+- Seasonal variations
+
+### Edit Rules
+
+Update existing rules:
+- Refine conditions
+- Adjust actions
+- Change priority
+
+### Duplicate Rules
+
+Copy existing rules to:
+- Create variations
+- Test modifications
+- Set up similar rules faster
+
+### Delete Rules
+
+Remove rules you no longer need:
+- Clean up your rule list
+- Simplify your setup
+- Remove conflicting rules
+
+<Warning>
+Deleting a rule doesn't affect emails that were already processed. It only prevents future emails from triggering that rule.
+</Warning>
+
+## Best Practices
+
+### Start Simple
+
+Create 2-3 essential rules first:
+1. Auto-archive newsletters
+2. Priority flag for VIP contacts
+3. Skip drafts for automated emails
+
+Add more rules as you identify patterns.
+
+### Be Specific
+
+Vague rules can cause unexpected behavior:
+
+**Bad:**
+```
+IF subject contains "hi"
+THEN skip draft
+```
+
+**Good:**
+```
+IF sender is newsletter@company.com
+AND subject contains unsubscribe link
+THEN skip draft AND archive
+```
+
+### Test Thoroughly
+
+After creating a rule:
+- Monitor it for a few days
+- Check for false positives
+- Adjust conditions as needed
+
+### Use Labels Strategically
+
+Rules work great with labels:
+- Create rules based on labels
+- Use rules to apply labels
+- Label-based workflows
+
+### Review Regularly
+
+Check your rules monthly:
+- Remove unused rules
+- Update outdated conditions
+- Optimize rule order
+
+## Troubleshooting
+
+<AccordionGroup>
+
+<Accordion title="Rule not triggering">
+  Common issues:
+  - Check if rule is enabled
+  - Verify conditions are written correctly
+  - Ensure rule priority isn't blocked by another rule
+  - Look for typos in keywords or email addresses
+</Accordion>
+
+<Accordion title="Too many emails matching a rule">
+  Your conditions might be too broad. Add more specific criteria using AND logic to narrow down matches.
+</Accordion>
+
+<Accordion title="Rule conflicts">
+  If two rules contradict each other, the higher priority rule wins. Review your rule order and adjust priorities or conditions.
+</Accordion>
+
+<Accordion title="Drafts using wrong tone">
+  Check if a rule is overriding your default prompt settings. You can specify tone in individual rules or remove tone specifications to use your default prompt.
+</Accordion>
+
+</AccordionGroup>
+
+## Advanced Rule Techniques
+
+### Time-Based Rules
+
+Create rules that only apply at certain times:
+
+```
+IF time is 9am-5pm weekdays
+AND sender is client
+THEN create draft immediately
+
+IF time is after 6pm or weekend
+THEN delay draft until next business day
+```
+
+### Thread-Aware Rules
+
+Rules that consider email thread context:
+
+```
+IF this is 3rd+ email in thread
+AND I haven't responded
+THEN flag as "needs response"
+AND create more detailed draft
+```
+
+### Learning Rules
+
+Rules that adapt based on your behavior:
+
+```
+IF sender matches pattern X
+AND I typically edit drafts heavily for this sender
+THEN create briefer draft for easier customization
+```
+
+## Integration with Other Features
+
+Rules work seamlessly with:
+
+- **[Labels](/features/labels)**: Apply or trigger based on labels
+- **[Prompt Editor](/features/prompt-editor)**: Override default prompt behavior
+- **[Agent Dashboard](/features/agent)**: Monitor rule effectiveness
+- **[Draft Quality](/features/drafting)**: Control which drafts are generated
+
+## Next Steps
+
+<Columns cols={2}>
+  <Card
+    title="Customize Your Prompt"
+    icon="wand-magic-sparkles"
+    href="/features/prompt-editor"
+  >
+    Set default behavior for your agent
+  </Card>
+  <Card
+    title="Manage Labels"
+    icon="tags"
+    href="/features/labels"
+  >
+    Use labels with your rules
+  </Card>
+</Columns>
+
