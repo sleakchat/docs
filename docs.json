@@ -28,6 +28,10 @@
           {
             "group": "Data & Privacy",
             "pages": ["data-privacy/your-data", "data-privacy/security", "data-privacy/export"]
+          },
+          {
+            "group": "Updates",
+            "pages": ["changelog"]
           }
         ]
       }

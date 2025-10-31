@@ -1,0 +1,391 @@
+---
+title: 'Mailbox Management'
+description: 'Connect, manage, and disconnect your email accounts'
+---
+
+## Connected Mailboxes
+
+Manage all email accounts connected to Untyped.
+
+## Viewing Connected Mailboxes
+
+Your Mailbox Settings page shows:
+
+- All connected email accounts
+- Connection status (active, syncing, error)
+- Last sync time
+- Number of emails processed
+- Storage used
+
+<Note>
+You can connect multiple Gmail and Outlook accounts to a single Untyped account.
+</Note>
+
+## Adding a New Mailbox
+
+<Steps>
+
+<Step title="Go to Mailbox Settings">
+  Navigate to Settings > Mailboxes in your dashboard
+</Step>
+
+<Step title="Click 'Add Mailbox'">
+  Choose Gmail or Outlook depending on your email provider
+</Step>
+
+<Step title="Authorize access">
+  Sign in to your email account and grant Untyped the required permissions
+  
+  <Tip>
+  See our [Connecting Email](/connecting-email) guide for detailed instructions on permissions.
+  </Tip>
+</Step>
+
+<Step title="Configure sync settings">
+  Choose what to sync:
+  - All folders/labels
+  - Specific folders only
+  - Time range (e.g., last 3 months)
+</Step>
+
+<Step title="Complete setup">
+  Your new mailbox will appear in your list and start syncing immediately
+</Step>
+
+</Steps>
+
+## Mailbox Status
+
+Each connected mailbox shows its current status:
+
+### Active
+
+Everything is working correctly:
+- ✅ Connection is healthy
+- ✅ Syncing regularly
+- ✅ Drafts are being generated
+
+### Syncing
+
+Currently updating with new emails:
+- 🔄 Processing new messages
+- 🔄 Updating knowledge base
+- 🔄 Generating drafts
+
+### Error
+
+There's a problem that needs attention:
+- ⚠️ Connection failed
+- ⚠️ Permission revoked
+- ⚠️ Authentication expired
+
+<Warning>
+If you see an error status, click on the mailbox to see details and fix the issue.
+</Warning>
+
+### Paused
+
+Temporarily stopped by you:
+- ⏸️ Not syncing new emails
+- ⏸️ No new drafts being generated
+- ⏸️ Can be resumed anytime
+
+## Mailbox Settings
+
+Click on any connected mailbox to configure:
+
+### Sync Options
+
+**Sync Frequency:**
+- Real-time (recommended)
+- Every hour
+- Every 4 hours
+- Manual only
+
+**Folders/Labels:**
+- All folders
+- Inbox only
+- Custom selection
+
+**Date Range:**
+- All history
+- Last 30 days
+- Last 6 months
+- Last year
+- Custom date range
+
+<Tip>
+Syncing less history makes setup faster but gives your agent less context to learn from.
+</Tip>
+
+### Draft Settings
+
+Control draft generation for this mailbox:
+
+- **Enable/disable drafts** for this mailbox
+- **Default prompt** or use mailbox-specific prompt
+- **Draft priority** (useful if you have multiple mailboxes)
+
+### Label Management
+
+For Gmail mailboxes:
+- Choose which labels to sync
+- Map labels to Untyped categories
+- Exclude promotional/spam folders
+
+For Outlook mailboxes:
+- Select folders to sync
+- Map categories
+- Exclude clutter
+
+## Managing Multiple Mailboxes
+
+If you connect multiple email accounts:
+
+### Primary Mailbox
+
+Designate one mailbox as primary:
+- Shows first in your dashboard
+- Default for new rules
+- Primary analytics source
+
+### Mailbox Rules
+
+Create rules specific to each mailbox:
+
+**Example:**
+```
+Work Mailbox (work@company.com):
+- Professional tone
+- Formal greetings
+- Include signature with title
+
+Personal Mailbox (personal@gmail.com):
+- Casual tone
+- Brief responses
+- Simple sign-off
+```
+
+### Cross-Mailbox Features
+
+- **Unified Dashboard**: See analytics across all mailboxes
+- **Shared Knowledge**: Agent learns from all connected accounts
+- **Separate Drafts**: Drafts appear in the correct mailbox
+
+<Note>
+Your agent combines learnings from all mailboxes to improve draft quality, but keeps drafts and responses separate per account.
+</Note>
+
+## Reconnecting a Mailbox
+
+If your mailbox shows an error:
+
+<Steps>
+
+<Step title="Click 'Reconnect'">
+  Find the mailbox with an error and click the reconnect button
+</Step>
+
+<Step title="Reauthorize access">
+  Sign in again and grant permissions
+  
+  <Note>
+  Common reasons for disconnection: password change, revoked permissions, expired tokens
+  </Note>
+</Step>
+
+<Step title="Verify connection">
+  Once reconnected, sync will resume automatically
+</Step>
+
+</Steps>
+
+## Pausing a Mailbox
+
+Temporarily stop syncing without disconnecting:
+
+**When to pause:**
+- Going on vacation
+- Testing Untyped with one account first
+- Mailbox is receiving high volume temporarily
+- Troubleshooting issues
+
+**While paused:**
+- No new emails are synced
+- No drafts are generated
+- Existing data and rules remain
+- Can resume anytime with one click
+
+<Tip>
+Pausing is great for vacation mode - your agent won't generate drafts while you're away.
+</Tip>
+
+## Disconnecting a Mailbox
+
+Permanently remove a mailbox from Untyped:
+
+<Warning>
+Disconnecting deletes all data related to this mailbox, including knowledge base entries, drafts, and learnings. This cannot be undone.
+</Warning>
+
+<Steps>
+
+<Step title="Select the mailbox">
+  Find the mailbox you want to disconnect
+</Step>
+
+<Step title="Click 'Disconnect'">
+  You'll see a confirmation warning
+</Step>
+
+<Step title="Confirm deletion">
+  Type the mailbox email address to confirm
+  
+  <Note>
+  This doesn't affect your actual email account - only removes it from Untyped
+  </Note>
+</Step>
+
+<Step title="Revoke permissions (optional)">
+  For complete disconnection, revoke Untyped's access in your email provider's security settings
+</Step>
+
+</Steps>
+
+## Storage Management
+
+Each mailbox uses storage for:
+
+- Email metadata
+- Knowledge base entries  
+- Draft history
+- Analytics data
+
+**Storage limits by plan:**
+- **Free Trial**: 1 GB per mailbox
+- **Pro**: 10 GB per mailbox
+- **Enterprise**: Unlimited
+
+<Card
+  title="Upgrade Your Plan"
+  icon="credit-card"
+  href="/settings/billing"
+>
+  Increase storage limits with a paid plan
+</Card>
+
+## Sync History
+
+View detailed sync activity:
+
+- Date and time of each sync
+- Number of emails processed
+- Errors encountered
+- Draft generation stats
+
+Use this to:
+- Troubleshoot issues
+- Verify syncing is working
+- Understand agent activity
+- Monitor mailbox health
+
+## Permissions Management
+
+Review and manage what Untyped can access:
+
+### Required Permissions
+
+Untyped needs these to function:
+- ✅ Read email content
+- ✅ Send emails (for drafts)
+- ✅ Access labels/folders
+- ✅ Read contacts
+
+### Optional Permissions
+
+Enable these for enhanced features:
+- 📅 Calendar access (better meeting response drafts)
+- 📎 Attachment handling (reference files in drafts)
+- 🔗 Link preview (understand context better)
+
+<Card
+  title="Learn About Permissions"
+  icon="lock"
+  href="/connecting-email"
+>
+  Detailed explanation of what each permission does
+</Card>
+
+## Troubleshooting
+
+<AccordionGroup>
+
+<Accordion title="Mailbox stuck in 'Syncing' status">
+  This is normal for large inboxes during initial setup. If it persists for over an hour:
+  - Pause and resume the sync
+  - Check your internet connection
+  - Reduce the date range being synced
+</Accordion>
+
+<Accordion title="Permission errors">
+  Common causes:
+  - Changed your email password
+  - Revoked access in email security settings
+  - Two-factor authentication issue
+  
+  Solution: Click "Reconnect" and reauthorize
+</Accordion>
+
+<Accordion title="Not all emails are syncing">
+  Check:
+  - Folder/label selection (are all desired folders selected?)
+  - Date range settings
+  - Storage limits (free tier has limits)
+  - Email provider restrictions
+</Accordion>
+
+<Accordion title="Can't remove mailbox">
+  Make sure:
+  - You have at least one other mailbox connected (can't remove your only mailbox)
+  - You have proper permissions
+  - Try pausing first, then disconnecting
+</Accordion>
+
+</AccordionGroup>
+
+## Best Practices
+
+<Columns cols={2}>
+  <Card title="Keep syncing" icon="rotate">
+    Let real-time sync run for best draft quality
+  </Card>
+  <Card title="Review permissions" icon="shield">
+    Periodically check that permissions are current
+  </Card>
+  <Card title="Monitor status" icon="heart-pulse">
+    Check mailbox status weekly for issues
+  </Card>
+  <Card title="Clean up old" icon="trash">
+    Disconnect mailboxes you no longer use
+  </Card>
+</Columns>
+
+## Next Steps
+
+<Columns cols={2}>
+  <Card
+    title="Connect Your First Email"
+    icon="envelope"
+    href="/connecting-email"
+  >
+    Step-by-step guide to connecting Gmail or Outlook
+  </Card>
+  <Card
+    title="Set Up Rules"
+    icon="list-check"
+    href="/features/rules"
+  >
+    Create rules specific to each mailbox
+  </Card>
+</Columns>
+
