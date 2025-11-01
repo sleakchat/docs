@@ -18,8 +18,8 @@
             "pages": ["index", "quickstart", "connecting-email"]
           },
           {
-            "group": "Features",
-            "pages": ["features/drafting", "features/agent", "features/labels", "features/prompt-editor", "features/rules", "features/knowledge"]
+            "group": "Functionality",
+            "pages": ["features/drafting", "features/labels", "features/agent", "features/prompt-editor", "features/rules"]
           },
           {
             "group": "Settings",
