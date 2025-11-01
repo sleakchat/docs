@@ -27,8 +27,13 @@
           },
           {
             "group": "Data & Privacy",
-            "pages": ["data-privacy/your-data", "data-privacy/security", "data-privacy/export"]
-          },
+            "pages": ["data-privacy/your-data", "data-privacy/security"]
+          }
+        ]
+      },
+      {
+        "tab": "Changelog",
+        "groups": [
           {
             "group": "Updates",
             "pages": ["changelog"]
@@ -42,6 +47,11 @@
           "anchor": "Go to App",
           "href": "https://beta.getuntyped.ai",
           "icon": "arrow-up-right-from-square"
+        },
+        {
+          "anchor": "Go to Website",
+          "href": "https://www.getuntyped.ai",
+          "icon": "globe"
         }
       ]
     }
