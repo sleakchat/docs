@@ -85,9 +85,9 @@ Monitor deployment status in the [Mintlify Dashboard](https://dashboard.mintlify
 ## Support
 
 - **Documentation Issues**: Open an issue in this repository
-- **Product Support**: support@getuntyped.ai
+- **Product Support**: hi@getuntyped.ai
 - **Mintlify Help**: [Mintlify Documentation](https://mintlify.com/docs)
 
 ## License
 
-© 2024 Untyped. All rights reserved.
+© 2025 Untyped. All rights reserved.
