@@ -10,49 +10,39 @@ Untyped automatically categorizes your emails using smart labels, helping you st
 ## How Labels Work
 
 Your AI agent analyzes each email and assigns appropriate labels based on:
+
 - Content and subject matter
 - Sender and recipient
 - Email thread history
-- Patterns from your inbox
 
-<Note>
-Labels are applied automatically in your email client (Gmail or Outlook) so you can filter and search more easily.
-</Note>
+<Note>Labels are applied automatically in your email client (Gmail or Outlook) so you can filter and search more easily.</Note>
 
-## Default Label Categories
+Automatically categorize emails into mailbox labels based on their content. When enabled, Untyped analyzes incoming emails and assigns appropriate labels.
 
-Untyped uses these standard categories:
+The label is always re-generated based on the last email received in a thread and can override existing labels.
 
-### Work & Business
+### Default Label Categories
 
-- **Projects**: Emails related to specific projects
-- **Meetings**: Meeting requests and calendar invites
-- **Tasks**: Action items and to-dos
-- **Urgent**: Time-sensitive emails requiring immediate attention
+Each label can be individually enabled or disabled (except "Needs reply" which is always on):
 
-### Personal
+- **Needs reply** (always enabled): Email requires a direct response from you
+- **FYI**: Informational email for awareness, no action required
+- **To do**: Email contains tasks or action items to complete
+- **Notification**: System or service notification, automated message
+- **Update**: Status update or progress report on existing matters
+- **Awaiting reply**: Email is waiting for a response from someone else
+- **Promotion**: Marketing or promotional content
 
-- **Family**: Communication with family members
-- **Friends**: Personal correspondence
-- **Finance**: Bills, invoices, and financial matters
-- **Travel**: Bookings, confirmations, and itineraries
+<Note>"Needs reply" is always enabled and cannot be turned off - these emails will always get a draft suggestion.</Note>
 
-### Automated
-
-- **Newsletters**: Subscriptions and marketing emails
-- **Notifications**: System alerts and automated messages
-- **Receipts**: Purchase confirmations and invoices
-- **Social**: Updates from social media platforms
-
-<Tip>
-You can customize which labels to use and create your own categories in [Rules](/features/rules).
-</Tip>
+<Tip>You can customize which labels to use in Settings. Custom label categories coming in Q1 2026.</Tip>
 
 ## Finding Labeled Emails
 
 ### In Gmail
 
 Labels appear in your Gmail sidebar:
+
 1. Click on any label to see all emails in that category
 2. Use Gmail's search with `label:category-name`
 3. Create filters based on Untyped's labels
@@ -60,166 +50,32 @@ Labels appear in your Gmail sidebar:
 ### In Outlook
 
 Categories appear as color-coded markers:
+
 1. Filter by category in your inbox view
 2. Use search with `category:name`
 3. Group emails by category for easy organization
-
-## Custom Labels
-
-You can create custom labels for specific needs:
-
-<Steps>
-
-<Step title="Define your label">
-  Decide what type of emails should get this label (e.g., "Client Communication", "Invoices", "Team Updates")
-</Step>
-
-<Step title="Create a rule">
-  Go to [Rules](/features/rules) and set up conditions for when to apply your custom label
-</Step>
-
-<Step title="Review and refine">
-  Check how your new label is being applied and adjust the rule if needed
-</Step>
-
-</Steps>
-
-## Label Accuracy
-
-Your agent gets better at labeling over time:
-
-- **Initial setup**: ~80% accuracy as it learns your patterns
-- **After 1 week**: ~90% accuracy with basic corrections
-- **After 1 month**: ~95%+ accuracy with fine-tuned rules
-
-### Improving Accuracy
-
-Help your agent label better by:
-- Moving mislabeled emails to the correct label
-- Creating rules for specific sender patterns
-- Providing clear folder structure in your inbox
-
-<Tip>
-When you manually correct a label, your agent remembers and applies that pattern to similar emails in the future.
-</Tip>
-
-## Label Management
-
-### Archive Old Labels
-
-Keep your inbox clean by archiving labels you no longer use:
-1. Go to Settings
-2. Select Label Management
-3. Archive or delete unused labels
-
-### Merge Similar Labels
-
-If you have duplicate or overlapping labels:
-1. Choose which label to keep
-2. Merge the others into it
-3. All historical emails will be relabeled
-
-### Export Label Data
-
-You can export your label configuration to:
-- Back up your setup
-- Transfer to another account
-- Share with team members
-
-## Search and Filters
-
-Use labels to create powerful searches:
-
-**Find all urgent work emails:**
-```
-label:work label:urgent
-```
-
-**Exclude newsletters:**
-```
--label:newsletters
-```
-
-**Recent family emails:**
-```
-label:family after:7d
-```
-
-## Integration with Other Features
-
-### Draft Responses
-
-Your agent uses labels to determine:
-- Which emails need draft responses
-- What tone to use in the draft
-- Priority order for drafting
-
-### Rules
-
-Labels trigger specific rules:
-- Auto-archive newsletters
-- Flag urgent emails
-- Forward specific categories
-
-<Card
-  title="Set Up Label Rules"
-  icon="list-check"
-  href="/features/rules"
->
-  Create rules based on your labels
-</Card>
 
 ## Troubleshooting
 
 <AccordionGroup>
 
-<Accordion title="Emails are being mislabeled">
+<Accordion title='Emails are being mislabeled'>
   This is normal in the first few days. Manually correct the labels, and your agent will learn. You can also create specific rules for consistently mislabeled patterns.
 </Accordion>
 
-<Accordion title="Too many labels cluttering my inbox">
-  Reduce the number of active labels in Settings. Focus on the categories that matter most to you.
-</Accordion>
+<Accordion title='Too many labels cluttering my inbox'>Reduce the number of active labels in Settings. Focus on the categories that matter most to you.</Accordion>
 
-<Accordion title="Labels not syncing to my email client">
-  Check your sync settings and ensure Untyped has permission to modify labels/categories in your email account.
-</Accordion>
+<Accordion title='Labels not syncing to my email client'>Check your sync settings and ensure Untyped has permission to modify labels/categories in your email account.</Accordion>
 
 </AccordionGroup>
-
-## Best Practices
-
-<Columns cols={2}>
-  <Card title="Start simple" icon="circle">
-    Use a few core labels initially, add more as needed
-  </Card>
-  <Card title="Correct mistakes" icon="pen">
-    Fix mislabeled emails to train your agent
-  </Card>
-  <Card title="Use with rules" icon="gears">
-    Combine labels with rules for powerful automation
-  </Card>
-  <Card title="Review regularly" icon="clock">
-    Check your label effectiveness monthly
-  </Card>
-</Columns>
 
 ## Next Steps
 
 <Columns cols={2}>
-  <Card
-    title="Create Label Rules"
-    icon="list-check"
-    href="/features/rules"
-  >
-    Automate actions based on labels
+  <Card title='Create Rules' icon='list-check' href='/features/rules'>
+    Control drafting & labeling behaviour based on sensitivity
   </Card>
-  <Card
-    title="View Email Insights"
-    icon="brain"
-    href="/features/knowledge"
-  >
-    See patterns in your labeled emails
+  <Card title='Customize Your Prompt' icon='wand-magic-sparkles' href='/features/prompt-editor'>
+    Control how your agent writes drafts
   </Card>
 </Columns>
-

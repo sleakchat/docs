@@ -5,144 +5,83 @@ description: 'How we protect your data'
 
 ## Security Overview
 
-We treat your email data with bank-level security standards.
+We take your email security seriously and implement multiple layers of protection.
 
 <Card title='Privacy policy' icon='shield' href='https://getuntyped.ai/privacy-policy'>
-  Learn more about how we protect your data
+  Read our complete privacy policy
 </Card>
 
 ## Encryption
 
-**At Rest**
-
-- AES-256 encryption for all stored data
-- AWS KMS with automatic key rotation
-- Encrypted backups across multiple regions
-
-**In Transit**
-
-- TLS 1.3 for all data transmission
-- Perfect Forward Secrecy for all sessions
-- 2048-bit RSA certificates
+All data is encrypted in transit using TLS 1.2+ and at rest with AES-256. OAuth tokens are stored encrypted and rotated regularly to minimize exposure.
 
 ## Infrastructure
 
 **Cloud Security**
 
-- Hosted on AWS with multi-region redundancy
-- Isolated VPCs per environment
-- 24/7 automated threat detection
-- DDoS protection with AWS Shield
+We host on Microsoft Azure within the EEA, using isolated production environments with network access controls and DDoS protection.
 
 **Database Protection**
 
-- Encrypted at rest
-- IP whitelisted access only
-- Not accessible from public internet
-- Automated encrypted backups
+Databases are encrypted, accessible only via role-based access with MFA, and completely isolated from the public internet. Automated backups run regularly.
 
 ## Authentication
 
 **OAuth 2.0**
 
-- Sign in via Google/Microsoft (no password to steal)
-- Tokens expire regularly
-- Securely encrypted token storage
+Sign in securely via Google or Microsoft. No passwords to manage or steal.
 
 **Two-Factor Authentication**
 
-- Available for all accounts
-- TOTP-based (Google Authenticator, Authy)
-- Strongly recommended
+Add an extra security layer with authenticator apps. Strongly recommended for all accounts.
 
-<Warning>Enable 2FA for maximum security. It prevents unauthorized access even if credentials are compromised.</Warning>
+<Tip>Enable 2FA in your email account for enhanced security.</Tip>
 
 ## Access Control
 
-**Internal Policies**
+We enforce least-privilege access policies with mandatory MFA for all staff who can access production systems. Every access is logged and auditable, and support can only view your data with your explicit permission.
 
-- Principle of least privilege
-- Regular access reviews
-- Multi-person approval for manual data access
-- All access is logged and audited
+## Security Practices
 
-**No Access to Your Data**
+We conduct code reviews and vulnerability scanning, manage dependencies with timely patching, and maintain 24/7 monitoring for suspicious activity. Documented incident response procedures ensure rapid handling of any issues.
 
-- Engineers cannot view your emails
-- Support requires your explicit permission
-- All background checks completed
+**Report Issues**
 
-## Security Testing
+Found a vulnerability? We appreciate responsible disclosure: [hi@getuntyped.ai](mailto:hi@getuntyped.ai)
 
-**Regular Assessments**
+## Data Deletion
 
-- Annual third-party penetration tests
-- Quarterly internal security reviews
-- Continuous automated vulnerability scanning
-- Security-focused code reviews
+When you close your account or disconnect your email:
 
-**Bug Bounty**
-Report vulnerabilities: security@getuntyped.ai
-
-## Disaster Recovery
-
-**Backups**
-
-- Continuous backups every 5 minutes
-- 30-day retention
-- Monthly restoration testing
-- Geo-redundant storage
-
-**Failover**
-
-- Multi-region architecture
-- Automatic failover
-- Less than 30 second downtime
-- Zero data loss guarantee
-
-## Compliance
-
-- **GDPR** - Full compliance
-- **Google CASA** - Tier 2 certified
-- **PCI DSS** - Via Stripe for payments
-
-## Incident Response
-
-If a security incident occurs:
-
-1. Immediate containment
-2. Root cause analysis
-3. Vulnerability remediation
-4. User notification within 72 hours
+- Email data deleted within 30 days
+- Access logs deleted within 90 days
+- Backups purged on normal cycles
 
 ## Best Practices
 
 **Protect Your Account**
 
-- Enable 2FA
-- Use OAuth (Google/Microsoft) instead of passwords
+- Enable 2FA on your Email account
+- Use OAuth sign-in (Google/Microsoft)
 - Review active sessions regularly
-- Never share credentials
+- Revoke access via your email provider anytime
 
-<Warning>If you notice suspicious activity, revoke all sessions immediately and contact hi@getuntyped.ai.</Warning>
+<Warning>If you notice suspicious activity, revoke all sessions and contact us immediately.</Warning>
 
-## Report Security Issues
+## Compliance
 
-Found a vulnerability? We appreciate responsible disclosure.
-
-**Include**:
-
-- Detailed description
-- Steps to reproduce
-- Potential impact
-
-We respond within 24 hours and provide regular updates.
+- GDPR compliant (EEA data storage)
+- Google API Services User Data Policy
+- Standard Contractual Clauses for data transfers
 
 <Columns cols={2}>
-  <Card title='Enable 2FA' icon='shield-check' href='/settings/profile'>
-    Secure your account now
+  <Card title='Account Settings' icon='gear' href='/settings/profile'>
+    Manage your security settings
   </Card>
   <Card title='Your Data Rights' icon='database' href='/data-privacy/your-data'>
     Learn what data we store
+  </Card>
+  <Card title='Sharing Diagnostics' icon='chart-line' href='/data-privacy/diagnostics'>
+    Optional usage analytics
   </Card>
 </Columns>

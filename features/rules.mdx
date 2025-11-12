@@ -12,68 +12,38 @@ Rules let you control your AI agent's behavior using two main settings: **AI Sen
 Control when Untyped should draft a reply to incoming emails. This slider has 4 levels:
 
 **Scale:**
+
 - **Very often** (0): Draft replies for almost every email
 - **Often** (1): Draft replies for most emails that seem to need a response
 - **Sometimes** (2): Only draft for emails that clearly need a reply
 - **Rarely** (3): Only draft for urgent or high-priority emails
 
-<Tip>
-Start with "Often" and adjust based on how many drafts you're getting. If you're overwhelmed with drafts, move it to "Sometimes" or "Rarely".
-</Tip>
+<Tip>Start with "Often" and adjust based on how many drafts you're getting. If you're overwhelmed with drafts, move it to "Sometimes" or "Rarely".</Tip>
 
 ## Marketing Filter
 
 Control what emails get filtered out so you don't see them. This slider has 4 levels:
 
 **Scale:**
+
 - **Just obvious sales outreach** (0): Only filter clear promotional emails
 - **Cold emails, unknown senders** (1): Filter promotional content and cold outreach
 - **Cold emails, unknown sender, newsletters** (2): Filter promotions, cold emails, and newsletters
 - **Anything not directly useful for my work** (3): Aggressive filtering of any non-essential emails
 
-<Warning>
-Be careful with level 3 - it might filter emails you actually want to see. Start with level 1 or 2 and increase gradually.
-</Warning>
-
-## Auto-Categorize Mailbox Labels
-
-Automatically categorize emails into mailbox labels based on their content. When enabled, Untyped analyzes incoming emails and assigns appropriate labels.
-
-### Available Labels
-
-Each label can be individually enabled or disabled (except "Needs reply" which is always on):
-
-- **Needs reply** (always enabled): Email requires a direct response from you
-- **FYI**: Informational email for awareness, no action required
-- **To do**: Email contains tasks or action items to complete
-- **Notification**: System or service notification, automated message
-- **Update**: Status update or progress report on existing matters
-- **Awaiting reply**: Email is waiting for a response from someone else
-- **Promotion**: Marketing or promotional content
-
-<Note>
-"Needs reply" is always enabled and cannot be turned off - these emails will always get a draft suggestion.
-</Note>
+<Warning>Be careful with level 3 - it might filter emails you actually want to see. Start with level 1 or 2 and increase gradually.</Warning>
 
 ## How to Adjust Settings
 
 <Steps>
 
-<Step title="Navigate to Rules">
-  Go to the Rules section in your Untyped dashboard at [beta.getuntyped.ai](https://beta.getuntyped.ai).
-</Step>
+<Step title='Navigate to Rules'>Go to the Rules section in your Untyped dashboard at [beta.getuntyped.ai](https://beta.getuntyped.ai).</Step>
 
-<Step title="Adjust AI Sensitivity">
-  Use the slider to control how often drafts are created. Move left for more drafts, right for fewer.
-</Step>
+<Step title='Adjust AI Sensitivity'>Use the slider to control how often drafts are created. Move left for more drafts, right for fewer.</Step>
 
-<Step title="Set Marketing Filter">
-  Use the slider to control what gets filtered. Move left for light filtering, right for aggressive filtering.
-</Step>
+<Step title='Set Marketing Filter'>Use the slider to control what gets filtered. Move left for light filtering, right for aggressive filtering.</Step>
 
-<Step title="Configure Auto-Categorization">
-  Toggle auto-categorization on/off and enable/disable specific labels as needed.
-</Step>
+<Step title='Configure Auto-Categorization'>Toggle auto-categorization on/off and enable/disable specific labels as needed.</Step>
 
 </Steps>
 
@@ -84,6 +54,7 @@ Your changes are saved automatically.
 ### For High Email Volume
 
 If you get 100+ emails per day:
+
 - **AI Sensitivity**: Sometimes or Rarely
 - **Marketing Filter**: Level 2 or 3
 - **Auto-categorization**: Enabled
@@ -91,6 +62,7 @@ If you get 100+ emails per day:
 ### For Moderate Email Volume
 
 If you get 20-50 emails per day:
+
 - **AI Sensitivity**: Often
 - **Marketing Filter**: Level 1 or 2
 - **Auto-categorization**: Enabled
@@ -98,6 +70,7 @@ If you get 20-50 emails per day:
 ### For Low Email Volume
 
 If you get fewer than 20 emails per day:
+
 - **AI Sensitivity**: Very often or Often
 - **Marketing Filter**: Level 0 or 1
 - **Auto-categorization**: Optional
@@ -106,40 +79,25 @@ If you get fewer than 20 emails per day:
 
 <AccordionGroup>
 
-<Accordion title="Too many drafts being created">
-  Adjust the AI Sensitivity slider to the right (toward "Rarely"). Start with "Sometimes" and adjust from there.
-</Accordion>
+<Accordion title='Too many drafts being created'>Adjust the AI Sensitivity slider to the right (toward "Rarely"). Start with "Sometimes" and adjust from there.</Accordion>
 
-<Accordion title="Missing important emails">
-  Your Marketing Filter might be set too high. Lower it to level 1 or 0, especially if you're missing newsletters or updates you want to see.
-</Accordion>
+<Accordion title='Missing important emails'>Your Marketing Filter might be set too high. Lower it to level 1 or 0, especially if you're missing newsletters or updates you want to see.</Accordion>
 
-<Accordion title="Wrong labels being applied">
+<Accordion title='Wrong labels being applied'>
   The AI learns from your email patterns. If labels are consistently wrong, try disabling auto-categorization temporarily and manually labeling emails for a few days.
 </Accordion>
 
-<Accordion title="Not enough drafts">
-  Move the AI Sensitivity slider to the left (toward "Very often"). This will create more draft suggestions.
-</Accordion>
+<Accordion title='Not enough drafts'>Move the AI Sensitivity slider to the left (toward "Very often"). This will create more draft suggestions.</Accordion>
 
 </AccordionGroup>
 
 ## Next Steps
 
 <Columns cols={2}>
-  <Card
-    title="Customize Your Prompt"
-    icon="wand-magic-sparkles"
-    href="/features/prompt-editor"
-  >
+  <Card title='Customize Your Prompt' icon='wand-magic-sparkles' href='/features/prompt-editor'>
     Control how your agent writes drafts
   </Card>
-  <Card
-    title="View Your Labels"
-    icon="tags"
-    href="/features/labels"
-  >
+  <Card title='View Your Labels' icon='tags' href='/features/labels'>
     See how emails are automatically categorized
   </Card>
 </Columns>
-

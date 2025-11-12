@@ -15,22 +15,41 @@
         "groups": [
           {
             "group": "Getting Started",
+            "icon": "rocket",
             "pages": ["index", "quickstart", "connecting-email"]
           },
           {
             "group": "Functionality",
-            "pages": ["features/drafting", "features/labels", "features/agent", "features/prompt-editor", "features/rules"]
+            "icon": "wand-magic-sparkles",
+            "pages": [
+              "features/drafting",
+              "features/labels",
+              {
+                "group": "Prompt Editor",
+                "pages": ["features/prompt-editor", "features/prompt-editor/components", "features/prompt-editor/best-practices", "features/prompt-editor/templates"]
+              },
+              "features/rules"
+            ]
           },
           {
             "group": "Settings",
+            "icon": "gear",
             "pages": ["settings/profile", "settings/mailboxes", "settings/billing"]
           },
           {
             "group": "Data & Privacy",
-            "pages": ["data-privacy/your-data", "data-privacy/security"]
+            "icon": "shield",
+            "pages": [
+              {
+                "group": "Your Data",
+                "pages": ["data-privacy/your-data", "data-privacy/diagnostics"]
+              },
+              "data-privacy/security"
+            ]
           },
           {
             "group": "Support",
+            "icon": "life-ring",
             "pages": ["support", "faqs"]
           }
         ]
@@ -40,6 +59,7 @@
         "groups": [
           {
             "group": "Updates",
+            "icon": "clock-rotate-left",
             "pages": ["changelog"]
           }
         ]
