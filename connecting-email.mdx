@@ -14,28 +14,16 @@ Untyped works with both Gmail and Outlook accounts. Choose your provider below t
 
 <Steps>
 
-<Step title="Sign in with Google">
-  Click the "Sign in with Google" button on the Untyped sign-in page at [beta.getuntyped.ai](https://beta.getuntyped.ai).
+<Step title='Sign in with Google'>Click the "Sign in with Google" button on the Untyped sign-in page at [beta.getuntyped.ai](https://beta.getuntyped.ai).</Step>
+
+<Step title='Select your account'>Choose the Gmail account you want to connect to Untyped.</Step>
+
+<Step title='Grant permissions'>
+  Untyped will request permission to: - Read your emails and metadata - Access your Gmail labels - Send emails on your behalf (for drafts)
+  <Note>These permissions allow Untyped to learn from your email history and generate personalized drafts. Your data is encrypted and never shared with third parties.</Note>
 </Step>
 
-<Step title="Select your account">
-  Choose the Gmail account you want to connect to Untyped.
-</Step>
-
-<Step title="Grant permissions">
-  Untyped will request permission to:
-  - Read your emails and metadata
-  - Access your Gmail labels
-  - Send emails on your behalf (for drafts)
-  
-  <Note>
-  These permissions allow Untyped to learn from your email history and generate personalized drafts. Your data is encrypted and never shared with third parties.
-  </Note>
-</Step>
-
-<Step title="Complete setup">
-  Once authorized, you'll be redirected to your Untyped dashboard where the onboarding process will begin.
-</Step>
+<Step title='Complete setup'>Once authorized, you'll be redirected to your Untyped dashboard where the onboarding process will begin.</Step>
 
 </Steps>
 
@@ -58,7 +46,7 @@ Untyped works with both Gmail and Outlook accounts. Choose your provider below t
   If the permission is unchecked, check it and click Continue. Untyped should start working within a few minutes.
 </Accordion>
 
-<Accordion title="Permission denied error">
+<Accordion title='Permission denied error'>
   If you see a permission error during sign-in, make sure your Google account allows third-party apps. Go to your Google Account settings and verify that security settings permit app access.
 </Accordion>
 
@@ -75,32 +63,19 @@ Untyped works with both Gmail and Outlook accounts. Choose your provider below t
 
 <Steps>
 
-<Step title="Sign in with Microsoft">
-  Click the "Sign in with Microsoft" button on the Untyped sign-in page at [beta.getuntyped.ai](https://beta.getuntyped.ai).
-</Step>
+<Step title='Sign in with Microsoft'>Click the "Sign in with Microsoft" button on the Untyped sign-in page at [beta.getuntyped.ai](https://beta.getuntyped.ai).</Step>
 
-<Step title="Select your account">
+<Step title='Select your account'>
   Choose the Outlook/Microsoft account you want to connect.
-  
-  <Tip>
-  This works with personal Outlook accounts, work accounts (Microsoft 365), and Hotmail accounts.
-  </Tip>
+  <Tip>This works with personal Outlook accounts, work accounts (Microsoft 365), and Hotmail accounts.</Tip>
 </Step>
 
-<Step title="Grant permissions">
-  Untyped will request permission to:
-  - Read your mail and folders
-  - Access your mailbox settings
-  - Send mail on your behalf (for drafts)
-  
-  <Note>
-  These permissions are necessary for Untyped to analyze your communication patterns and generate draft responses.
-  </Note>
+<Step title='Grant permissions'>
+  Untyped will request permission to: - Read your mail and folders - Access your mailbox settings - Send mail on your behalf (for drafts)
+  <Note>These permissions are necessary for Untyped to analyze your communication patterns and generate draft responses.</Note>
 </Step>
 
-<Step title="Complete setup">
-  After authorization, you'll be taken to your Untyped dashboard where the onboarding process will start.
-</Step>
+<Step title='Complete setup'>After authorization, you'll be taken to your Untyped dashboard where the onboarding process will start.</Step>
 
 </Steps>
 
@@ -108,7 +83,11 @@ Untyped works with both Gmail and Outlook accounts. Choose your provider below t
 
 <AccordionGroup>
 <Accordion title="Work account restrictions">
-  If you're using a work/school Microsoft 365 account, your organization's admin may need to approve the Untyped app. Contact your IT department if you encounter access issues.
+  If you're using a work/school Microsoft 365 account, your organization's admin may need to approve the Untyped app. 
+  
+  **For admins:** See our [Microsoft 365 Admin Setup Guide](/troubleshooting/microsoft-365-admin-setup) for step-by-step instructions.
+  
+  **For users:** Contact your IT department and share the admin setup guide with them.
 </Accordion>
 
 <Accordion title="Two-factor authentication">
@@ -127,9 +106,7 @@ Untyped requires read and send permissions to function effectively:
 - **Send access**: To create draft responses in your inbox (you always have final approval before sending)
 - **Label/folder access**: To categorize and organize emails automatically
 
-<Warning>
-Untyped never sends emails without your explicit approval. All drafts are suggestions that you can edit, approve, or discard.
-</Warning>
+<Warning>Untyped never sends emails without your explicit approval. All drafts are suggestions that you can edit, approve, or discard.</Warning>
 
 ## Data Security
 
@@ -137,11 +114,6 @@ Your email data is encrypted at rest and in transit. We use industry-standard se
 
 ## Next Steps
 
-<Card
-  title="Complete Onboarding"
-  icon="rocket"
-  href="/quickstart"
->
+<Card title='Complete Onboarding' icon='rocket' href='/quickstart'>
   Now that your email is connected, complete the onboarding process to start using Untyped.
 </Card>
-

@@ -50,7 +50,14 @@
           {
             "group": "Support",
             "icon": "life-ring",
-            "pages": ["support", "faqs"]
+            "pages": [
+              "support",
+              "faqs",
+              {
+                "group": "Troubleshooting",
+                "pages": ["troubleshooting/microsoft-365-admin-setup"]
+              }
+            ]
           }
         ]
       },
