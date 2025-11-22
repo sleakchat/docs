@@ -16,7 +16,14 @@
           {
             "group": "Getting Started",
             "icon": "rocket",
-            "pages": ["index", "quickstart", "connecting-email"]
+            "pages": [
+              "index",
+              "quickstart",
+              {
+                "group": "Connecting Your Email",
+                "pages": ["connecting-email/general", "connecting-email/gmail", "connecting-email/outlook"]
+              }
+            ]
           },
           {
             "group": "Functionality",
@@ -28,7 +35,8 @@
                 "group": "Prompt Editor",
                 "pages": ["features/prompt-editor", "features/prompt-editor/components", "features/prompt-editor/best-practices", "features/prompt-editor/templates"]
               },
-              "features/rules"
+              "features/rules",
+              "features/knowledge-base"
             ]
           },
           {
@@ -55,7 +63,7 @@
               "faqs",
               {
                 "group": "Troubleshooting",
-                "pages": ["troubleshooting/microsoft-365-admin-setup"]
+                "pages": ["troubleshooting/outlook-settings", "troubleshooting/microsoft-365-admin-setup"]
               }
             ]
           }

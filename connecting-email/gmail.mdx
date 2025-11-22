@@ -1,0 +1,50 @@
+---
+title: 'Gmail'
+description: 'Connect your Gmail account to Untyped'
+---
+
+## Connect Gmail to Untyped
+
+<Steps>
+
+<Step title='Sign in with Google'>Click the "Sign in with Google" button on the Untyped sign-in page at [beta.getuntyped.ai](https://beta.getuntyped.ai).</Step>
+
+<Step title='Select your account'>Choose the Gmail account you want to connect to Untyped.</Step>
+
+<Step title='Grant permissions'>
+  Untyped will request permission to: - Read your emails and metadata - Access your Gmail labels - Send emails on your behalf (for drafts)
+  <Note>These permissions allow Untyped to learn from your email history and generate personalized drafts. Your data is encrypted and never shared with third parties.</Note>
+</Step>
+
+<Step title='Complete setup'>Once authorized, you'll be redirected to your Untyped dashboard where the onboarding process will begin.</Step>
+
+</Steps>
+
+## Troubleshooting Gmail Connection
+
+<AccordionGroup>
+<Accordion title="Untyped not working? Check permissions">
+  If Untyped isn't syncing or drafting emails, the most common issue is missing Google Account permissions.
+  
+  **How to fix:**
+  
+  1. Go to your [Google Account permissions page](https://myaccount.google.com/permissions)
+  2. Find "Untyped" in your connected apps
+  3. Make sure the checkbox for **"Read, compose and send emails from your Gmail account"** is checked
+  
+  <Frame>
+    <img src="/images/google_permissions.png" alt="Google Account Permissions" />
+  </Frame>
+  
+  If the permission is unchecked, check it and click Continue. Untyped should start working within a few minutes.
+</Accordion>
+
+<Accordion title='Permission denied error'>
+  If you see a permission error during sign-in, make sure your Google account allows third-party apps. Go to your Google Account settings and verify that security settings permit app access.
+</Accordion>
+
+<Accordion title="Can't see certain emails">
+  Untyped respects Gmail's native filtering. If you have filters that archive or delete emails automatically, Untyped won't process those emails.
+</Accordion>
+</AccordionGroup>
+

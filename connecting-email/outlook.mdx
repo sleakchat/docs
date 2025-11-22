@@ -1,0 +1,52 @@
+---
+title: 'Outlook'
+description: 'Connect your Outlook account to Untyped'
+---
+
+## Connect Outlook to Untyped
+
+<Steps>
+
+<Step title='Sign in with Microsoft'>Click the "Sign in with Microsoft" button on the Untyped sign-in page at [beta.getuntyped.ai](https://beta.getuntyped.ai).</Step>
+
+<Step title='Select your account'>
+  Choose the Outlook/Microsoft account you want to connect.
+  <Tip>This works with personal Outlook accounts, work accounts (Microsoft 365), and Hotmail accounts.</Tip>
+</Step>
+
+<Step title='Grant permissions'>
+  Untyped will request permission to: - Read your mail and folders - Access your mailbox settings - Send mail on your behalf (for drafts)
+  <Note>These permissions are necessary for Untyped to analyze your communication patterns and generate draft responses.</Note>
+</Step>
+
+<Step title='Complete setup'>After authorization, you'll be taken to your Untyped dashboard where the onboarding process will start.</Step>
+<Step title='Configure settings In Outlook'>
+  You must configure how Untyped organizes your emails.
+
+{' '}
+
+<Warning>**IMPORTANT:** You must configure your folder and category settings in OUTLOOK. Untyped **will not work** with Outlook unless you complete this step.</Warning>
+
+See our [Outlook Settings Guide](/troubleshooting/outlook-settings) for details on how to configure this correctly.
+
+</Step>
+
+</Steps>
+
+## Troubleshooting Outlook Connection
+
+<AccordionGroup>
+<Accordion title="I see a notice that says 'Need admin approval'">
+  Some organizations require IT approval before you can connect new apps.
+  
+  **If you are a user:** Ask your IT department to approve Untyped.
+  
+  **If you are an IT Admin:** Follow our [Microsoft 365 Admin Setup Guide](/troubleshooting/microsoft-365-admin-setup) to whitelist Untyped.
+</Accordion>
+
+<Accordion title="Untyped isn't organizing my emails">
+  If you are connected but your emails aren't being labeled or moved, you likely skipped the configuration step. **Solution:** You must go to your dashboard settings and choose whether Untyped should
+  use **Folders** or **Categories**. Without this, the AI cannot touch your emails. [View the Setup Guide](/troubleshooting/outlook-settings)
+</Accordion>
+
+</AccordionGroup>
