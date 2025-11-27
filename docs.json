@@ -35,8 +35,7 @@
                 "group": "Prompt Editor",
                 "pages": ["features/prompt-editor", "features/prompt-editor/components", "features/prompt-editor/best-practices", "features/prompt-editor/templates"]
               },
-              "features/rules",
-              "features/knowledge-base"
+              "features/rules"
             ]
           },
           {
@@ -84,7 +83,7 @@
       "anchors": [
         {
           "anchor": "Go to App",
-          "href": "https://beta.getuntyped.ai",
+          "href": "https://app.getuntyped.ai",
           "icon": "arrow-up-right-from-square"
         },
         {
@@ -109,7 +108,7 @@
     "primary": {
       "type": "button",
       "label": "Go to App",
-      "href": "https://beta.getuntyped.ai"
+      "href": "https://app.getuntyped.ai"
     }
   },
   "contextual": {
