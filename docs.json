@@ -31,6 +31,7 @@
             "pages": [
               "features/drafting",
               "features/labels",
+              "features/knowledge-base",
               {
                 "group": "Prompt Editor",
                 "pages": ["features/prompt-editor", "features/prompt-editor/components", "features/prompt-editor/best-practices", "features/prompt-editor/templates"]
