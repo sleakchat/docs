@@ -5,15 +5,30 @@ description: 'Copy your Outlook or Gmail signature to include it in Untyped draf
 
 <Steps>
 
-<Step title='Copy your signature'>Copy your signature from a new (or previously sent) email within Gmail/Outlook.</Step>
+<Step title='Copy your signature'>
+  Copy your signature from a new email within Gmail/Outlook.
+  <Warning>This does not work with plain text in existing mails - copy directly from the text field in the email editor or from your Email settings.</Warning>
+</Step>
 
-<Step title='Navigate to email settings'>Open your dashboard and navigate to the signature section. Open settings → navigate to 'mailboxes' → select the right mailbox → click 'email settings'.</Step>
+{/* prettier-ignore */}
+<Step title='Navigate to email settings'>
+  Open your dashboard and navigate to the signature section
 
-<Step title='Paste and activate'>Paste your signature in the designated field and activate the setting.</Step>
+    1. Open settings
+    2. Click the 'mailboxes' dropdown
+    3. Select the right mailbox
+    4. Click 'Email settings'
+
+</Step>
+
+<Step title='Paste and activate'>
+  Paste your signature in the designated field and save it. It will be added to all new Untyped drafts from now on.
+  <Info>Make sure that the Email signature setting checkbox is enabled</Info>
+</Step>
 
 </Steps>
 
-<Frame>
+<Frame caption="Copying a signature from Gmail and pasting it in Untyped">
 
-  <video autoPlay muted loop className='w-full aspect-video' src='/videos/untyped_signature.mp4'></video>
+  <video autoPlay muted loop playsInline className='w-full aspect-video' src='/videos/untyped_signature.mp4'></video>
 </Frame>
