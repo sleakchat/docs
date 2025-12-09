@@ -42,7 +42,7 @@
           {
             "group": "Settings",
             "icon": "gear",
-            "pages": ["settings/profile", "settings/mailboxes", "settings/billing"]
+            "pages": ["settings/signature", "settings/profile", "settings/mailboxes", "settings/billing"]
           },
           {
             "group": "Data & Privacy",
