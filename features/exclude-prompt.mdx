@@ -1,0 +1,56 @@
+---
+title: 'Exclude Prompt'
+description: 'Tell Untyped which emails not to reply to using natural language'
+---
+
+<Note>Use exclude prompt when the [base sensitivity sliders](/features/rules) aren't enough. This gives you fine-grained control to describe specific email types that don't need replies.</Note>
+
+## What is Exclude Prompt?
+
+Exclude prompt lets you describe in plain language which emails don't need replies. Instead of manually skipping drafts, teach the AI your preferences once.
+
+<Frame>
+  <img src='/images/exclude_prompt.png' alt='Exclude prompt interface' />
+</Frame>
+
+## How It Works
+
+Write rules in natural language describing emails that don't need responses. The AI applies these rules automatically to skip draft creation.
+
+**Example rules:**
+
+- Automated notifications and system alerts
+- Newsletters and marketing emails
+- Calendar invites I've already responded to
+- "Thank you" or confirmation messages
+- FYIs with no questions
+
+<Tip>Be specific. Instead of "newsletters," try "weekly digest emails and automated reports."</Tip>
+
+## Setup
+
+<Steps>
+  <Step title='Navigate to Rules'>Go to Rules → Exclude more tab at [app.getuntyped.ai](https://app.getuntyped.ai/rules)</Step>
+  <Step title='Describe exclusions'>Write which emails don't need replies in the text box</Step>
+  <Step title='Save'>Click Save to apply your rules</Step>
+</Steps>
+
+## Combine with Base Sensitivity
+
+Exclude prompt works alongside [base sensitivity](/features/rules):
+
+- **Base sensitivity**: Sets overall draft frequency
+- **Exclude prompt**: Defines specific categories to skip
+
+Use both for precise control—set sensitivity to "Often" and exclude routine emails you never need to reply to.
+
+## Next Steps
+
+<Columns cols={2}>
+  <Card title='Base Sensitivity' icon='sliders' href='/features/rules'>
+    Adjust draft frequency with the slider
+  </Card>
+  <Card title='Labels' icon='tags' href='/features/labels'>
+    See how emails are categorized
+  </Card>
+</Columns>

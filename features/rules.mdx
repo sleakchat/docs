@@ -1,11 +1,15 @@
 ---
-title: 'Rules'
-description: 'Control how your AI agent behaves with sensitivity and filtering settings'
+title: 'Base Sensitivity'
+description: 'Control when Untyped drafts replies to your emails'
 ---
 
-## What are Rules?
+## What is Base Sensitivity?
 
-Rules let you control your AI agent's behavior using two main settings: **AI Sensitivity** (when to draft replies) and **Marketing Filter** (what emails to filter out). These settings work alongside auto-categorization to give you full control over your inbox.
+Base sensitivity controls how frequently Untyped drafts replies to incoming emails. Use the slider to set your threshold—lower values create more drafts, higher values create fewer.
+
+<Note>Need more control? Use the [exclude prompt](/features/exclude-prompt) to describe specific email types that don't need replies in natural language.</Note>
+
+---
 
 ## AI Sensitivity
 
@@ -94,10 +98,10 @@ If you get fewer than 20 emails per day:
 ## Next Steps
 
 <Columns cols={2}>
+  <Card title='Exclude Prompt' icon='filter' href='/features/exclude-prompt'>
+    Describe which emails to skip in natural language
+  </Card>
   <Card title='Customize Your Prompt' icon='wand-magic-sparkles' href='/features/prompt-editor'>
     Control how your agent writes drafts
-  </Card>
-  <Card title='View Your Labels' icon='tags' href='/features/labels'>
-    See how emails are automatically categorized
   </Card>
 </Columns>
